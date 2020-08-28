@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Newborn Inpatient H&P</title>
+ </head>
+ <body>
+ 
+    <h2>Newborn Inpatient H&P</h2>
+	
+	<form>
+	<p>weeks <input type = "text" id = "discoverpreg"> </p>
+	</form>
+     
+	 <p> Mother discovered pregnancy at <span id="fblank"> </span> weeks</p> 
+	 
+	 <script>
+	var discoverpreg = document.getElementById("discoverpreg");
+	var fblank = document.getElementById("fblank")
+	discoverpreg.onkeyup = function(){
+		fblank.innerHTML = discoverpreg.value;
+	localStorage.setItem("savedstuff", discoverpreg.value);
+	}
+	
+	var saved = localStorage.getItem("savedstuff");
+	
+	if (saved) {
+	fblank.innerHTML = saved;
+}
+	
+	 </script>
+    
+     
+  
+  
+ </body>
+</html>
