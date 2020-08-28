@@ -22,10 +22,10 @@
 	localStorage.setItem("savedstuff", discoverpreg.value);
 	}
 	
-	var saved = localStorage.getItem("savedstuff");
+	var storage = localStorage.getItem("savedstuff");
 	
-	if (saved) {
-	fblank.innerHTML = saved;
+	if (storage.length > 0) {
+	fblank.innerHTML = storage;
 }
 	
 	 </script>
