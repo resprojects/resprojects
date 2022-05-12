@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Newborn Inpatient H&P</title>
+ </head>
+ <body>
+ 
+    <h2>Newborn Inpatient H&P</h2>
+	  <h3> Prenatal Course </h3>
+	<form>
+  <p>Initials <input type = "text" id = "geninitials"></p>
+	<p>Weeks <input type = "text" id = "genweeks"> </p>
+  <p>Visits <input type = "text" id = "genvisits"> </p>
+  <p>Prenatal testing/ultrasounds <input type = "text" value = "normal" id = "gentests">  </p>
+  <p>Prenatal medications <input type = "text" value = "prenatal vitamins" id = "genmeds">  </p>
+	</form>
+    <br> 
+    <br> 
+    <br> 
+    <br>
+   <p> Initials <span id = "inputinitials"> </p>
+   <h3> Prenatal Course </h3>
+   <p> Discovered pregnancy at <span id="inputweeks"> </span> weeks </p> 
+   <p> Number of OB visits: <span id="inputvisits"> </span> </p> 
+	 <p> Prenatal testing/ultrasounds: <span id="inputtests"> </span> </p>
+   <p> Prenatal medications: <span id="inputmeds"> </span>  </p>
+   <script>
+	var initials = document.getElementById("geninitials");
+	var initialsvalue = document.getElementById("inputinitials")
+	initials.onkeyup = function(){
+		initialsvalue.innerHTML = initials.value;
+	localStorage.setItem("ptinitials", initials.value);
+	}
+	
+	var myptinitials = localStorage.getItem("ptinitials");
+	
+	if (myptinitials.length > 0) {
+initialsvalue.innerHTML = myptinitials;
+}	
+	 </script>
+   
+	 <script>
+	var weeks = document.getElementById("genweeks");
+	var weeksvalue = document.getElementById("inputweeks")
+	weeks.onkeyup = function(){
+		weeksvalue.innerHTML = weeks.value;
+	localStorage.setItem("ptweeks", weeks.value);
+	}
+	
+	var myptweeks = localStorage.getItem("ptweeks");
+	
+	if (myptweeks.length > 0) {
+	weeksvalue.innerHTML = myptweeks;
+}	
+	 </script>
+   
+   	 <script>
+	var visits = document.getElementById("genvisits");
+	var visitsvalue = document.getElementById("inputvisits")
+	visits.onkeyup = function(){
+		visitsvalue.innerHTML = visits.value;
+	localStorage.setItem("ptvisits", visits.value);
+	}
+	
+	var myptvisits = localStorage.getItem("ptvisits");
+	
+	if (myptvisits.length > 0) {
+	visitsvalue.innerHTML = myptvisits;
+}	
+	 </script>
+    
+     	<script>
+	var tests = document.getElementById("gentests");
+	var testsvalue = document.getElementById("inputtests")
+	tests.onkeyup = function(){
+		testsvalue.innerHTML = tests.value;
+	localStorage.setItem("pttests", tests.value);
+	}
+	
+	var mypttests = localStorage.getItem("pttests");
+	
+	if (mypttests.length > 0) {
+	testsvalue.innerHTML = mypttests;
+}	
+	 </script> 
+  
+    <script>
+	var meds = document.getElementById("genmeds");
+	var medsvalue = document.getElementById("inputmeds")
+	meds.onkeyup = function(){
+		medsvalue.innerHTML = meds.value;
+	localStorage.setItem("ptmeds", meds.value);
+	}
+	
+	var myptmeds = localStorage.getItem("ptmeds");
+	
+	if (myptmeds.length > 0) {
+	medsvalue.innerHTML = myptmeds;
+}	
+	 </script> 
+  
+ </body>
+</html>
