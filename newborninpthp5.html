@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ <title> Newborn Inpatient H&P </title>
+ 
+ <form>
+ <p><label for = "deliverylabinfo">Newborn Inpatient H&P</label></p>
+ <textarea id= "gennewborninfo" name="gennewborninfo" type = "text" rows="50" cols="100" onkeyup = "displaytext()" >
+Mother's initials:
+Maternal age:
+G P > G P
+Gestational age:
+Birth weight:
+APGARS: ,
+Time of Birth:
+Delivery route: NSVD / CS
+Membranes: AROM / SROM duration:( : )
+Fluid: Clear/ Thin/Thick Meconium
+Presentation: Vertex
+Cord: 2/3 Vessel, Delayed clamping / < > / 60S
+Resuscitation: DSBS / Deep Suction / CPAP
+Complications:
+Maternal Blood type: A / B / O Rh: + / - Ab: + / -
+
+Maternal Labs
+GBS: Negative / Positive, Adequate tx?
+RPR/Syphilis IgG: Negative
+HIV: Negative
+HepBsAg: Negative
+TB(PPD/Quant Gold): Negative / Positive / Indeterminate
+Gonorrhea: Negative
+Chlamydia: Negative
+Rubella: Immune / Nonreactive / Equivocal
+HSV1 IgG: Negative
+HSV2 IgG: Negative
+COVID19: Negative
+A1C:
+Oral glucose tolerance test: 1 hour / 3 hour
+ 
+Baby’s Name:
+PCP:
+Feeding: Breast / Bottle / Both
+
+Maternal PMH:  
+
+Prenatal Course
+Discovered pregnancy: weeks / months
+Number of OB visits:
+Prenatal testing/ultrasounds: Normal
+Prenatal meds: Prenatal vitamins
+Complications: Infections / Gestational HTN / Gestational DM
+IUDE: none [vaping, cannabis, tobacco, alcohol, opiates, methadone, meth, cocaine, heroin]
+Family history: no history of SIDS, congenital heart disease, asthma, coagulopathy or genetic conditions
+
+Social History
+Mother lives with:  Husband / Father of baby / children  in Fresno
+Father: Lives with mother, will be involved
+Siblings: None / Live w/ mother / are healthy, do not see specialists
+Smoking in home: Yes / No
+Pets: Dogs / Cats / Birds / None
+Substance use in home: Yes / No
+History of depression, other mental health conditions: Yes / No / Previous treatment
+Support: Yes / No
+Other care takers: Maternal / Paternal  grandmother / grandfather / aunt / uncle / older siblings
+Supplies (car seat, crib/bassinet): Yes / No
+Safety/Domestic Violence: Feels safe, never victim
+Previous CPS involvement: Yes / No
+
+Physical Exam:
+
+To-do:
+
+ </textarea>
+ 
+ </form>
+ 
+ <p id= "inputnewborninfo"> </p>
+ 
+<script>
+var input = document.getElementById("gennewborninfo");
+var output = document.getElementById("inputnewborninfo");
+function displaytext(){
+output.innerText = input.value;
+    output.style.display = "block"
+}
+</script>
+
+ </body>
+</html>
